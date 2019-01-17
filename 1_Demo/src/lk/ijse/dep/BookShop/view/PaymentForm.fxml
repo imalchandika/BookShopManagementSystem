@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="731.0" prefWidth="674.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.BookShop.controller.PaymentFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="90.0" layoutX="-2.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="676.0">
+         <fill>
+            <LinearGradient endX="0.638095238095238" endY="1.0" startX="0.638095238095238">
+               <stops>
+                  <Stop color="#52cdc2" />
+                  <Stop color="#3ce4e1" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="219.0" layoutY="23.0" text="Payment Book">
+         <font>
+            <Font name="Courier New Bold" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgHome" fitHeight="70.0" fitWidth="100.0" layoutX="22.0" layoutY="9.0" onMouseClicked="#navigate" onMouseEntered="#PlayEnterAnimation" onMouseExited="#PlayExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Home_96px.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtOrderID" labelFloat="true" layoutX="242.0" layoutY="264.0" onAction="#txtOrderID_OnAction" prefHeight="25.0" prefWidth="172.0" promptText="Order ID" />
+      <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="63.0" layoutY="376.0" onAction="#txtUnitPrice_OnAction" prefHeight="25.0" prefWidth="144.0" promptText="Unit Price" />
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="437.0" layoutY="453.0" onAction="#btnSave_OnAction" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: lime;" text="Add" textAlignment="CENTER" textFill="#070606">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXButton>
+      <TableView fx:id="tblOrderDetails" layoutX="55.0" layoutY="109.0" prefHeight="139.0" prefWidth="581.0">
+         <columns>
+            <TableColumn prefWidth="147.0" text="Order ID" />
+            <TableColumn prefWidth="132.0" text="qty" />
+            <TableColumn minWidth="0.0" prefWidth="131.0" text="Book ID" />
+            <TableColumn minWidth="0.0" prefWidth="170.0" text="unitprice" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtBookQty" labelFloat="true" layoutX="241.0" layoutY="376.0" onKeyReleased="#txtAuthorName_OnKeyReleased" prefHeight="25.0" prefWidth="172.0" promptText="Book Qty Onhand" />
+      <JFXDatePicker fx:id="dprBuyDate" layoutX="63.0" layoutY="425.0" prefHeight="28.0" prefWidth="144.0" promptText="Payment Date">
+         <defaultColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#03544c" />
+                  <Stop color="#8a6c6c" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </defaultColor>
+      </JFXDatePicker>
+      <JFXTextField fx:id="txtPaymentID" labelFloat="true" layoutX="63.0" layoutY="264.0" onAction="#txtPaymentID_OnAction" prefHeight="25.0" prefWidth="144.0" promptText="Payment ID" />
+      <TableView fx:id="tblPaymentDetails" layoutX="55.0" layoutY="498.0" prefHeight="157.0" prefWidth="581.0">
+        <columns>
+          <TableColumn prefWidth="160.0" text="Payment ID" />
+          <TableColumn prefWidth="196.0" text="price" />
+            <TableColumn prefWidth="224.0" text="OrderID" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="542.0" layoutY="453.0" onAction="#btnDelete_OnAction" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: red;" text="Delete" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblTotalPrize" layoutX="377.0" layoutY="678.0" prefHeight="28.0" prefWidth="144.0" text="0.0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font></Label>
+      <JFXButton fx:id="btnOrderPay" buttonType="RAISED" layoutX="531.0" layoutY="679.0" onAction="#btnOrderPay_OnAction" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: lime;" text="OrderPay" textAlignment="CENTER" textFill="#070606">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXButton>
+      <ComboBox fx:id="cmbBookID" layoutX="63.0" layoutY="330.0" onAction="#OnClickcmbBook" prefHeight="25.0" prefWidth="144.0" promptText="BookID" />
+      <ComboBox fx:id="cmbCuustomerID" layoutX="242.0" layoutY="330.0" prefHeight="25.0" prefWidth="172.0" promptText="Customer ID" />
+      <JFXButton fx:id="btnReport" layoutX="55.0" layoutY="680.0" onAction="#OnClickReport" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: yellow;" text="Report">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="230.0" layoutY="678.0" prefHeight="25.0" prefWidth="131.0" text="TOTAL">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtQty" layoutX="241.0" layoutY="427.0" prefHeight="25.0" prefWidth="172.0" promptText=" Qty" />
+   </children>
+</AnchorPane>

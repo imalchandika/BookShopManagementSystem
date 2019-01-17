@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="490.0" prefWidth="828.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.BookShop.controller.DashboardController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="126.0" layoutY="-2.0" stroke="#3473ad" strokeType="INSIDE" width="828.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.8952380952380953" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop color="#da2626" />
+                  <Stop color="#00d3a6" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fx:id="imgMember" fitHeight="150.0" fitWidth="120.0" layoutX="14.0" layoutY="161.0" onMouseClicked="#navigate" onMouseEntered="#PlayEnterAnimation" onMouseExited="#PlayExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/members-42919_640.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgBook" fitHeight="150.0" fitWidth="120.0" layoutX="145.0" layoutY="141.0" onMouseClicked="#navigate" onMouseEntered="#PlayEnterAnimation" onMouseExited="#PlayExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/book-933088_640.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgAuthor" fitHeight="150.0" fitWidth="120.0" layoutX="284.0" layoutY="141.0" onMouseClicked="#navigate" onMouseEntered="#PlayEnterAnimation" onMouseExited="#PlayExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/hand-325321_640.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgPublisher" fitHeight="150.0" fitWidth="100.0" layoutX="341.0" layoutY="242.0" onMouseClicked="#navigate" onMouseEntered="#PlayEnterAnimation" onMouseExited="#PlayExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Administrator%20Male_96px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="132.0" layoutY="43.0" text="BookShop Management System" textFill="#17170f">
+         <font>
+            <Font name="Courier New Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="103.0" layoutY="446.0" prefHeight="16.0" prefWidth="577.0" text="Copyright 2018 IJSE - Imal chandika" textAlignment="CENTER">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4833333333333333" centerY="0.4380952380952381" focusAngle="-31.61" focusDistance="0.11627906976744184" radius="0.5930232558139534">
+               <stops>
+                  <Stop color="#2403ad" />
+                  <Stop color="#000000f2" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="lblWelcome" alignment="TOP_CENTER" layoutX="210.0" layoutY="363.0" prefHeight="36.0" prefWidth="363.0" text="Welcome" textAlignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5666666666666667" endY="0.5857142857142857" startX="0.7047619047619048" startY="0.2857142857142857">
+               <stops>
+                  <Stop color="#460202" />
+                  <Stop color="#5e5050" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="lblStatus" alignment="CENTER" layoutX="103.0" layoutY="399.0" prefHeight="36.0" prefWidth="577.0" text="Please Select an Option to Proceed" textAlignment="CENTER">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5666666666666667" endY="0.5857142857142857" startX="0.7047619047619048" startY="0.2857142857142857">
+               <stops>
+                  <Stop color="#460202" />
+                  <Stop color="#5e5050" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fx:id="imgBurrow" fitHeight="100.0" fitWidth="120.0" layoutX="547.0" layoutY="131.0" onMouseClicked="#navigate" onMouseEntered="#PlayEnterAnimation" onMouseExited="#PlayExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Accounting_96px.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Orderimg" fitHeight="88.0" fitWidth="120.0" layoutX="421.0" layoutY="137.0" onMouseClicked="#navigate" onMouseEntered="#PlayEnterAnimation" onMouseExited="#PlayExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/lib.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="OrderDetailimg" fitHeight="81.0" fitWidth="170.0" layoutX="658.0" layoutY="143.0" onMouseClicked="#navigate" onMouseEntered="#PlayEnterAnimation" onMouseExited="#PlayExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/book.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

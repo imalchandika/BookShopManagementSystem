@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="557.0" prefWidth="676.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.BookShop.controller.AuthorFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="90.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="676.0">
+         <fill>
+            <LinearGradient endX="0.9904761904761905" endY="0.08095238095238096" startX="1.0">
+               <stops>
+                  <Stop color="#51bfbd" />
+                  <Stop color="#21c7e1" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="201.0" layoutY="23.0" text="Manage Author" textFill="#141212">
+         <font>
+            <Font name="Courier New Bold" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgHome" fitHeight="70.0" fitWidth="100.0" layoutX="24.0" layoutY="9.0" onMouseClicked="#navigate" onMouseEntered="#PlayEnterAnimation" onMouseExited="#PlayExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/house-148033_640.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtAuthorID" labelFloat="true" layoutX="65.0" layoutY="134.0" onAction="#txtAuthord_OnAction" prefHeight="25.0" prefWidth="557.0" promptText="Author ID" />
+      <JFXTextField fx:id="txtAuthorName" labelFloat="true" layoutX="65.0" layoutY="184.0" prefHeight="25.0" prefWidth="557.0" promptText="Author Name" />
+      <JFXTextField fx:id="txtAuthorEmail" labelFloat="true" layoutX="65.0" layoutY="239.0" prefHeight="25.0" prefWidth="557.0" promptText="Email" />
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="261.0" layoutY="291.0" onAction="#btnSave_OnAction" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: lime;" text="Save" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="359.0" layoutY="291.0" onAction="#btnDelete_OnAction" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: red;" text="Delete" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblAuthor" layoutX="57.0" layoutY="334.0" prefHeight="200.0" prefWidth="581.0">
+         <columns>
+            <TableColumn prefWidth="104.0" text="Author ID" />
+            <TableColumn prefWidth="280.0" text="Author Name" />
+            <TableColumn prefWidth="196.0" text="Email" />
+
+         </columns>
+
+      </TableView>
+   </children>
+</AnchorPane>

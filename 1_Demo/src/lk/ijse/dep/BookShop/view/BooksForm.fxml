@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="586.0" prefWidth="675.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.BookShop.controller.BooksFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="90.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="676.0">
+         <fill>
+            <LinearGradient endX="0.9952380952380953" endY="0.9857142857142857" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#01ebeb" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="211.0" layoutY="24.0" text="Manage Books" textFill="#282525">
+         <font>
+            <Font name="Courier New Bold" size="35.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtBookID" labelFloat="true" layoutX="47.0" layoutY="124.0" prefHeight="25.0" prefWidth="270.0" promptText="Book ID" />
+      <ImageView fx:id="imgHome" fitHeight="70.0" fitWidth="100.0" layoutX="23.0" layoutY="10.0" onMouseClicked="#navigate" onMouseEntered="#PlayEnterAnimation" onMouseExited="#PlayExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Home_96px.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtBookName" layoutX="47.0" layoutY="230.0" prefHeight="25.0" prefWidth="270.0" promptText="Book Name" />
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="70.0" layoutY="347.0" onAction="#btnSave_OnAction" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: lime;" text="Save" textAlignment="CENTER" textFill="#070505">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="169.0" layoutY="347.0" onAction="#btnDelete_OnAction" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: red;" text="Delete" textAlignment="CENTER" textFill="#0a0909">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnRelateAuthor" buttonType="RAISED" layoutX="382.0" layoutY="347.0" onAction="#btnRelateAuthor_OnAction" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: yellow;" text="Relate Author" textAlignment="CENTER" textFill="#0a0707">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnRelatePublisher" buttonType="RAISED" layoutX="511.0" layoutY="347.0" onAction="#btnRelatePublisher_OnAction" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #0099ff;" text="Relate Publisher" textAlignment="CENTER" textFill="#141111">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtBookAmount" layoutX="339.0" layoutY="230.0" prefHeight="25.0" prefWidth="287.0" promptText="Book Amount" />
+      <JFXTextField fx:id="txtBookQty" labelFloat="true" layoutX="338.0" layoutY="124.0" prefHeight="25.0" prefWidth="287.0" promptText="QTY" />
+      <JFXComboBox fx:id="cmbauthorId" layoutX="47.0" layoutY="175.0" prefHeight="25.0" prefWidth="270.0" promptText="Author ID" />
+      <JFXComboBox fx:id="cmbpublisherId" layoutX="339.0" layoutY="175.0" prefHeight="25.0" prefWidth="287.0" promptText="Publisher ID" />
+      <TableView fx:id="tblBook" layoutX="9.0" layoutY="419.0" prefHeight="146.0" prefWidth="655.0">
+         <columns>
+            <TableColumn prefWidth="88.0" text="bookid" />
+            <TableColumn prefWidth="131.0" text="bookname" />
+            <TableColumn prefWidth="105.0" text="bookamount" />
+            <TableColumn prefWidth="117.0" text="Qty" />
+            <TableColumn prefWidth="106.0" text="authorID" />
+            <TableColumn prefWidth="106.0" text="pulisherID" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
